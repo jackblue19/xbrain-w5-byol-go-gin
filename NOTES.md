@@ -1,8 +1,8 @@
 1. Ít đổi code nhất: chỉ thêm main.go ở root + 2 dependencies.
 2. Giữ server/server.go sạch ko hề sửa code.
 3. Phù hợp với template.yaml hiện tại: BuildMethod: go1.x, HttpApi, PayloadFormatVersion: 2.0.
-4. Không phải tự viết manual routing như Option C.
-5. Cold start thấp hơn Web Adapter Option B.
+4. Tận dụng lại Gin route sẵn -> ko phải tự viết manual routing như Option C.
+5. Cold start thấp hơn Web Adapter Option B. -> vẫn thua option C
 6. Đơn giản nhất dễ handle nhất
 
 ---
