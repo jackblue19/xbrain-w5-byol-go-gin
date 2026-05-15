@@ -1,0 +1,21 @@
+1. Ít đổi code nhất: chỉ thêm main.go ở root + 2 dependencies.
+2. Giữ server/server.go sạch ko hề sửa code.
+3. Phù hợp với template.yaml hiện tại: BuildMethod: go1.x, HttpApi, PayloadFormatVersion: 2.0.
+4. Không phải tự viết manual routing như Option C.
+5. Cold start thấp hơn Web Adapter Option B.
+6. Đơn giản nhất dễ handle nhất
+
+---
+1. Không hề sửa code ở server/server.go
+2. Có tạo mới main.go ở root level
+3. Dùng Gin adapter ở main.go
+4. Dùng GinLambdaV2 vì theo template.yaml thì đang dùng HTTP API v2
+5. Em có chạy thêm go mod tidy lại sai khi thêm dependencies
+
+    	"github.com/aws/aws-lambda-go/events"
+
+	    "github.com/aws/aws-lambda-go/lambda"
+
+`=> go get github.com/aws/aws-lambda-go`
+
+`go get github.com/awslabs/aws-lambda-go-api-proxy/gin`
