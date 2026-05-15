@@ -4,6 +4,11 @@
 4. Tận dụng lại Gin route sẵn -> ko phải tự viết manual routing như Option C.
 5. Cold start thấp hơn Web Adapter Option B. -> vẫn thua option C
 6. Đơn giản nhất dễ handle nhất
+7. Cold start estimate = 83.79 ms 
+
+	`REPORT ... Duration: 1.84 ms ... Init Duration: 83.79 ms`	
+	
+	(ở trong file word ***Personal_lab_evidence.docx***, ảnh cuối cùng) 
 
 ---
 1. Không hề sửa code ở server/server.go
